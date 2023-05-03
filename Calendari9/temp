@@ -1,0 +1,35 @@
+private static boolean checkT(String[][] matrix, int[] h_pos, int[] t_pos) {
+
+        boolean t_nextto_h = false;
+
+        if(matrix[t_pos[0] + 1][t_pos[1]].equals("H")){
+            t_nextto_h = true;
+        }
+        if(matrix[t_pos[0] - 1][t_pos[1]].equals("H")){
+            t_nextto_h = true;
+        }
+        if(matrix[t_pos[0]][t_pos[1] - 1].equals("H")){
+            t_nextto_h = true;
+        }
+        if(matrix[t_pos[0]][t_pos[1] + 1].equals("H")){
+            t_nextto_h = true;
+        }
+        if(matrix[t_pos[0] + 1][t_pos[1] + 1].equals("H")){
+            t_nextto_h = true;
+        }
+        if(matrix[t_pos[0] - 1][t_pos[1] + 1].equals("H")){
+            t_nextto_h = true;
+        }
+        if(matrix[t_pos[0] + 1][t_pos[1] - 1].equals("H")){
+            t_nextto_h = true;
+        }
+        if(matrix[t_pos[0] - 1][t_pos[1] - 1].equals("H")){
+            t_nextto_h = true;
+        }
+        if(t_pos[0] == h_pos[0] && t_pos[1] == h_pos[1]){
+            t_nextto_h = true;
+        }
+
+
+        return t_nextto_h;
+    }
